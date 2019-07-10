@@ -4,7 +4,7 @@ void ballot::setowner(name username, uint8_t count){
   require_auth(username);
   uint64_t owner_count;
   for (auto itr = _owner.begin(); itr != _owner.end(); ++itr) {
-      ++count;
+      ++owner_count;
   }
   eosio_assert(owner_count>0,"Owner is already set.");
   auto itr = _owner.begin();
